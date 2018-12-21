@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--MAIN ACTIVITY-->
+    <dimen name="main_activity_progress_width">50dp</dimen>
+    <dimen name="main_activity_progress_height">50dp</dimen>
+
+    <!--CHARACTER ITEM-->
+    <dimen name="item_character_height">175dp</dimen>
+    <dimen name="item_character_card_margin">3dp</dimen>
+    <dimen name="item_character_card_height">3dp</dimen>
+    <dimen name="item_character_card_corner_radius">2dp</dimen>
+    <dimen name="item_character_card_elevation">2dp</dimen>
+    <dimen name="item_character_card_image_height">132dp</dimen>
+    <dimen name="item_character_card_name_height">40dp</dimen>
+
+</resources>

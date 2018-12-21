@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">RickAndMorty</string>
+
+    <!--Error messages-->
+    <string name="error_request">Oops, something went wrong!</string>
+    <string name="error_not_connection">You do not have an internet connection. Review your connection and try again.
+    </string>
+    <string name="error_server_maintenance">Sorry, we are in maintenance!</string>
+    <string name="error_unknown">A unknown error occurs!</string>
+
+    <!-- Snachbar message and action -->
+    <string name="action_refresh">Refresh</string>
+    <string name="action_message_character_loading">Loading character list…</string>
+    <string name="action_message_fetch_character_loading">Loading more character…</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navigation"
+            app:startDestination="@id/characterList">
+
+    <fragment
+        android:id="@+id/characterList"
+        android:name="com.developer.rcu.rickandmorty.view.CharacterListFragment"
+        android:label="fragment_pokemon_list"
+        tools:layout="@layout/fragment_character_list">
+        <action
+            android:id="@+id/action_characterList_to_characterDetail"
+            app:destination="@id/characterDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterDetail"
+        android:name="com.developer.rcu.rickandmorty.view.CharacterDetailFragment"
+        android:label="fragment_pokemon_detail"
+        tools:layout="@layout/fragment_character_detail"/>
+</navigation>
