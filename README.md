@@ -8,8 +8,10 @@ Android application developed in Kotlin using Clean Architecture and Arch (Andro
 - Character List: OK
 - Character Detail: IN PROGRESS
 - Splash Screen: PENDING
-- Searcher: PENDING
 - Local data with Room: PENDING
+- Searcher: PENDING
+
+Possible future feature is the creation of a custom error screen for handling exceptions.
 
 ---
 
@@ -34,3 +36,10 @@ Clean architecture manages to uncouple, in a simple and effective way, each modu
 * **Room**: The Room persistence library provides an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite.
 
   The library helps you create a cache of your app's data on a device that's running your app. This cache, which serves as your app's single source of truth, allows users to view a consistent copy of key information within your app, regardless of whether users have an internet connection.
+  
+## Other characteristics of the project
+
+* Kotlin coroutines in its stable version to perform asynchronous tasks.
+* Dagger for dependency injection.
+* Retrofit with Okhttp3 for api calls.
+* Glide to load images from network.
