@@ -13,7 +13,7 @@ Android application developed in Kotlin using Clean Architecture and Arch (Andro
 
 ---
 
-## Archiecture
+## Architecture
 
 I have used Clean architecture following the great work done by Fernando Cejas (<a>https://fernandocejas.com/</a>).
 
