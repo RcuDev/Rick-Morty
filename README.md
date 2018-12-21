@@ -5,11 +5,11 @@ Android application developed in Kotlin using Clean Architecture and Arch (Andro
 
 **Features**
 
-- Character List: OK
-- Character Detail: IN PROGRESS
-- Splash Screen: PENDING
-- Local data with Room: PENDING
-- Searcher: PENDING
+- Character List: **OK**
+- Character Detail: **IN PROGRESS**
+- Splash Screen: **PENDING**
+- Local data with Room: **PENDING**
+- Searcher: **PENDING**
 
 Possible future feature is the creation of a custom error screen for handling exceptions.
 
