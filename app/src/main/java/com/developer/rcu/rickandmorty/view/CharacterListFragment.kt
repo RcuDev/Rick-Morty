@@ -66,10 +66,10 @@ class CharacterListFragment : BaseFragment() {
         characterListAdapter.context = this.requireContext()
         characterListAdapter.clickListener = { character ->
             this.view?.let { view ->
+                hideProgress()
                 val bundle = Bundle()
                 bundle.putParcelable(Constants.BUNDLE_CHARACTER, character)
                 view.findNavController().navigate(R.id.action_characterList_to_characterDetail, bundle)
-                Snackbar.make(view, "CHARACTER CLICKED: ${character.name}", Snackbar.LENGTH_LONG).show()
             }
         }
     }

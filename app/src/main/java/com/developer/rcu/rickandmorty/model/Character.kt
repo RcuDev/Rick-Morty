@@ -12,6 +12,8 @@ data class Character(
     val id: Int,
     @SerializedName("name")
     val name: String,
+    @SerializedName("status")
+    val status: String,
     @SerializedName("species")
     val species: String,
     @SerializedName("type")
@@ -34,6 +36,7 @@ data class Character(
 
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
+        parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
