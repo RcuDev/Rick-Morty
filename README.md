@@ -5,9 +5,9 @@ Android application developed in Kotlin using Clean Architecture and Arch (Andro
 
 **Features**
 
+- Splash Screen: **OK**
 - Character List: **OK**
 - Character Detail: **IN PROGRESS**
-- Splash Screen: **PENDING**
 - Local data with Room: **PENDING**
 - Searcher: **PENDING**
 
