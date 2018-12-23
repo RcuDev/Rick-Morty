@@ -51,7 +51,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="32dp"
-                android:elevation="6dp"
+                android:elevation="10dp"
                 app:cardCornerRadius="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -121,7 +121,8 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:maxLines="@integer/max_lines_2"
-                    android:text="STATUS" />
+                    android:text="STATUS"
+                    android:textColor="@color/detailDateTypeTextColor"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -162,7 +163,8 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:maxLines="@integer/max_lines_2"
-                    android:text="GENDER" />
+                    android:text="GENDER"
+                    android:textColor="@color/detailDateTypeTextColor"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -203,7 +205,8 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:maxLines="@integer/max_lines_2"
-                    android:text="SPECIES" />
+                    android:text="SPECIES"
+                    android:textColor="@color/detailDateTypeTextColor"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -244,7 +247,8 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:maxLines="@integer/max_lines_2"
-                    android:text="ORIGIN" />
+                    android:text="ORIGIN"
+                    android:textColor="@color/detailDateTypeTextColor"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -285,7 +289,8 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:maxLines="@integer/max_lines_2"
-                    android:text="LAST LOCATION" />
+                    android:text="LAST LOCATION"
+                    android:textColor="@color/detailDateTypeTextColor"/>
 
                 <TextView
                     android:layout_width="match_parent"

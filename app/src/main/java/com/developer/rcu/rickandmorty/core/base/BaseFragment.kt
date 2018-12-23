@@ -11,6 +11,7 @@ import com.developer.rcu.rickandmorty.AndroidApplication
 import com.developer.rcu.rickandmorty.core.di.ApplicationComponent
 import com.developer.rcu.rickandmorty.view.MainActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.toolbar.*
 
 /**
  * Created by Raul Corvo on 27/11/2018
@@ -38,8 +39,27 @@ abstract class BaseFragment : Fragment() {
         snackbar?.dismiss()
     }
 
+    internal fun showToolBar() {
+        toolBar(View.VISIBLE)
+    }
+
+    internal fun hideToolBar() {
+        toolBar(View.GONE)
+    }
+
     private fun progressStatus(viewStatus: Int) =
-        with(activity) { if (this is MainActivity) this.progress.visibility = viewStatus }
+        with(activity) {
+            if (this is MainActivity) {
+                this.progress.visibility = viewStatus
+            }
+        }
+
+    private fun toolBar(viewStatus: Int) =
+        with(activity) {
+            if (this is MainActivity) {
+                this.toolbar.visibility = viewStatus
+            }
+        }
 
     private fun notify(@StringRes message: Int) =
         this.view?.let { view ->
