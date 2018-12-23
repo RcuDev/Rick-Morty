@@ -76,22 +76,34 @@ class CharacterListFragment : BaseFragment() {
                 view.findNavController().navigate(R.id.action_characterList_to_characterDetail, bundle)
             }
         }
+        refresh_character_list.setOnRefreshListener {
+            refresh_character_list.isRefreshing = false
+            refreshCharacterList()
+        }
     }
 
     private fun renderCharacterList(pagedCharacters: PagedCharacters) {
         characterListAdapter.collection.addAll(pagedCharacters.results)
-        characterListAdapter.notifyDataSetChanged()
 
         if (pageToLoad < pagedCharacters.info.pages) {
             pageToLoad++
             characterListViewModel.loadCharacterList(pageToLoad)
         } else {
+            characterListAdapter.notifyDataSetChanged()
             hideProgress()
         }
     }
 
     private fun retryLoadCharacterList() {
         showProgress(R.string.action_message_character_loading)
+        characterListViewModel.loadCharacterList(pageToLoad)
+    }
+
+    private fun refreshCharacterList() {
+        showProgress(R.string.action_message_character_loading)
+        characterListAdapter.collection = arrayListOf()
+        characterListAdapter.notifyDataSetChanged()
+        pageToLoad = 1
         characterListViewModel.loadCharacterList(pageToLoad)
     }
 }
