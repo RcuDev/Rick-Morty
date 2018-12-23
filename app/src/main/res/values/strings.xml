@@ -13,4 +13,7 @@
     <string name="action_message_character_loading">Loading character list…</string>
     <string name="action_message_fetch_character_loading">Loading more character…</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

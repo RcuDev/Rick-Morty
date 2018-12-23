@@ -7,8 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".view.MainActivity">
 
-    <include
-        layout="@layout/toolbar"/>
+    <!--<include-->
+        <!--layout="@layout/toolbar"/>-->
 
     <ProgressBar
         android:id="@+id/progress"
