@@ -2,7 +2,6 @@ package com.developer.rcu.rickandmorty.view
 
 import android.arch.lifecycle.Observer
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.v7.widget.StaggeredGridLayoutManager
 import android.view.View
 import androidx.navigation.findNavController
@@ -58,7 +57,7 @@ class CharacterListFragment : BaseFragment() {
             }
         })
         characterListViewModel.onError().observe(this, Observer { errorMessage ->
-            notifyWithAction(errorMessage ?: R.string.error_unknown, R.string.action_refresh, ::refreshCharacterList)
+            notifyWithAction(errorMessage ?: R.string.error_unknown, R.string.action_refresh, ::retryLoadCharacterList)
         })
     }
 
@@ -91,9 +90,8 @@ class CharacterListFragment : BaseFragment() {
         }
     }
 
-    private fun refreshCharacterList() {
+    private fun retryLoadCharacterList() {
         showProgress(R.string.action_message_character_loading)
-        characterListAdapter.collection = arrayListOf()
         characterListViewModel.loadCharacterList(pageToLoad)
     }
 }
