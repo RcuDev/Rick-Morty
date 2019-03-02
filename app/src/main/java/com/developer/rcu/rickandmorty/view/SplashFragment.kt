@@ -42,7 +42,7 @@ class SplashFragment : BaseFragment() {
     private fun navigateToCharacterList() {
         findNavController().navigate(
             R.id.action_splash_to_characterList, null,
-            NavOptions.Builder().setPopUpTo(R.id.splashScreen, true)
-                .build())
+            NavOptions.Builder().setPopUpTo(R.id.splashScreen, true).build()
+        )
     }
 }

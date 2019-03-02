@@ -1,5 +1,6 @@
 package com.developer.rcu.rickandmorty.core.iterators
 
+import android.support.annotation.UiThread
 import com.developer.rcu.rickandmorty.core.net.NetResult
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -11,6 +12,7 @@ import kotlinx.coroutines.launch
  */
 abstract class UseCase<in P, out T : Any> {
 
+    @UiThread
     abstract suspend fun run(param: P): NetResult<T>
 
     operator fun invoke(param: P, onResult: (NetResult<T>) -> Unit = {}) {
@@ -19,6 +21,4 @@ abstract class UseCase<in P, out T : Any> {
             launch(Dispatchers.Main) { onResult(job.await()) }
         }
     }
-
-    class None
 }

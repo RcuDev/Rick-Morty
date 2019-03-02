@@ -20,7 +20,8 @@
             android:id="@+id/characterImage"
             android:layout_width="match_parent"
             android:layout_height="@dimen/item_character_card_image_height"
-            android:scaleType="center" />
+            android:scaleType="center"
+            android:transitionName="character_image"/>
 
         <TextView
             android:id="@+id/characterName"

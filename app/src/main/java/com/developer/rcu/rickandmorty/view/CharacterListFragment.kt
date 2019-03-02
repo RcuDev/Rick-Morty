@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v7.widget.StaggeredGridLayoutManager
 import android.view.View
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.FragmentNavigatorExtras
 import com.developer.rcu.rickandmorty.R
 import com.developer.rcu.rickandmorty.core.base.BaseFragment
 import com.developer.rcu.rickandmorty.core.utils.Constants
@@ -65,17 +66,22 @@ class CharacterListFragment : BaseFragment() {
         if (firsLaunch) {
             showProgress(R.string.action_message_character_loading)
         }
+
         characterListRV.layoutManager = StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
         characterListRV.adapter = characterListAdapter
         characterListAdapter.context = this.requireContext()
-        characterListAdapter.clickListener = { character ->
+        characterListAdapter.clickListener = { character, imageView ->
             this.view?.let { view ->
                 hideProgress()
+                val extras = FragmentNavigatorExtras(
+                    imageView to "character_image"
+                )
                 val bundle = Bundle()
                 bundle.putParcelable(Constants.BUNDLE_CHARACTER, character)
-                view.findNavController().navigate(R.id.action_characterList_to_characterDetail, bundle)
+                view.findNavController().navigate(R.id.action_characterList_to_characterDetail, bundle, null, extras)
             }
         }
+
         refresh_character_list.setOnRefreshListener {
             refresh_character_list.isRefreshing = false
             refreshCharacterList()

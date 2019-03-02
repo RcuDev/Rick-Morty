@@ -12,5 +12,7 @@ class GetCharacterListUseCase @Inject constructor(private val characterRepositor
 
     override suspend fun run(param: Param) = characterRepository.getCharacterList(param.page)
 
-    data class Param(val page: Int)
+    data class Param(
+        val page: Int
+    )
 }
