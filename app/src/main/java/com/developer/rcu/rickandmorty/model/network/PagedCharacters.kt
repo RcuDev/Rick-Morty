@@ -1,4 +1,4 @@
-package com.developer.rcu.rickandmorty.model
+package com.developer.rcu.rickandmorty.model.network
 
 import com.google.gson.annotations.SerializedName
 

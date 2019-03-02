@@ -11,7 +11,7 @@ import com.developer.rcu.rickandmorty.R
 import com.developer.rcu.rickandmorty.core.base.BaseFragment
 import com.developer.rcu.rickandmorty.core.utils.Constants
 import com.developer.rcu.rickandmorty.databinding.FragmentCharacterDetailBinding
-import com.developer.rcu.rickandmorty.model.Character
+import com.developer.rcu.rickandmorty.model.network.Character
 import kotlinx.android.synthetic.main.fragment_character_detail.*
 
 /**

@@ -1,6 +1,6 @@
 package com.developer.rcu.rickandmorty.core.net
 
-import com.developer.rcu.rickandmorty.model.PagedCharacters
+import com.developer.rcu.rickandmorty.model.network.PagedCharacters
 import retrofit2.Call
 import retrofit2.Retrofit
 import javax.inject.Inject

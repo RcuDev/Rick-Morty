@@ -4,7 +4,7 @@ import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import com.developer.rcu.rickandmorty.core.base.BaseViewModel
 import com.developer.rcu.rickandmorty.core.iterators.GetCharacterListUseCase
-import com.developer.rcu.rickandmorty.model.PagedCharacters
+import com.developer.rcu.rickandmorty.model.network.PagedCharacters
 import javax.inject.Inject
 
 /**

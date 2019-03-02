@@ -8,7 +8,7 @@
 
         <variable
             name="character"
-            type="com.developer.rcu.rickandmorty.model.Character" />
+            type="com.developer.rcu.rickandmorty.model.network.Character" />
     </data>
 
     <ScrollView

@@ -9,7 +9,7 @@ import androidx.navigation.fragment.FragmentNavigatorExtras
 import com.developer.rcu.rickandmorty.R
 import com.developer.rcu.rickandmorty.core.base.BaseFragment
 import com.developer.rcu.rickandmorty.core.utils.Constants
-import com.developer.rcu.rickandmorty.model.PagedCharacters
+import com.developer.rcu.rickandmorty.model.network.PagedCharacters
 import com.developer.rcu.rickandmorty.view.adapter.CharacterListAdapter
 import com.developer.rcu.rickandmorty.viewmodel.CharacterListViewModel
 import kotlinx.android.synthetic.main.fragment_character_list.*

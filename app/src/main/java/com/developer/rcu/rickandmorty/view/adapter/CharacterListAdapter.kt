@@ -9,7 +9,7 @@ import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.developer.rcu.rickandmorty.R
-import com.developer.rcu.rickandmorty.model.Character
+import com.developer.rcu.rickandmorty.model.network.Character
 import kotlinx.android.synthetic.main.character_list_item.view.*
 import javax.inject.Inject
 
@@ -20,7 +20,7 @@ class CharacterListAdapter @Inject constructor() :
     RecyclerView.Adapter<CharacterListAdapter.CharacterListViewHolder>() {
 
     internal var collection: MutableList<Character> = arrayListOf()
-    internal var clickListener: (Character, ImageView) -> Unit = {character, imageView ->}
+    internal var clickListener: (Character, ImageView) -> Unit = { character, imageView ->}
     internal lateinit var context: Context
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): CharacterListViewHolder =

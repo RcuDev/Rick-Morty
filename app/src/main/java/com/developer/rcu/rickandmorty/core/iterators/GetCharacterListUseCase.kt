@@ -1,7 +1,7 @@
 package com.developer.rcu.rickandmorty.core.iterators
 
 import com.developer.rcu.rickandmorty.core.repository.CharacterRepository
-import com.developer.rcu.rickandmorty.model.PagedCharacters
+import com.developer.rcu.rickandmorty.model.network.PagedCharacters
 import javax.inject.Inject
 
 /**
