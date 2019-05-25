@@ -1,8 +1,8 @@
 package com.developer.rcu.rickandmorty.view
 
-import android.arch.lifecycle.Observer
+import androidx.lifecycle.Observer
 import android.os.Bundle
-import android.support.v7.widget.StaggeredGridLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import android.view.View
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.FragmentNavigatorExtras
@@ -67,7 +67,10 @@ class CharacterListFragment : BaseFragment() {
             showProgress(R.string.action_message_character_loading)
         }
 
-        characterListRV.layoutManager = StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
+        characterListRV.layoutManager = androidx.recyclerview.widget.StaggeredGridLayoutManager(
+            3,
+            androidx.recyclerview.widget.StaggeredGridLayoutManager.VERTICAL
+        )
         characterListRV.adapter = characterListAdapter
         characterListAdapter.context = this.requireContext()
         characterListAdapter.clickListener = { character, imageView ->

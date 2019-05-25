@@ -5,6 +5,5 @@
     <color name="colorAccent">#827717</color>
     <color name="ic_launcher_transparent_background">#00000000</color>
     <color name="baseBackground">#2E2E2E</color>
-    <color name="colorSeparator">#80E53935</color>
     <color name="detailDateTypeTextColor">#FFFFFFFF</color>
 </resources>

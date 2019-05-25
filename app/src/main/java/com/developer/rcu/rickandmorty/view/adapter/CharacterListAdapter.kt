@@ -1,7 +1,7 @@
 package com.developer.rcu.rickandmorty.view.adapter
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,7 +17,7 @@ import javax.inject.Inject
  * Created by Raul Corvo on 27/11/2018
  */
 class CharacterListAdapter @Inject constructor() :
-    RecyclerView.Adapter<CharacterListAdapter.CharacterListViewHolder>() {
+    androidx.recyclerview.widget.RecyclerView.Adapter<CharacterListAdapter.CharacterListViewHolder>() {
 
     internal var collection: MutableList<Character> = arrayListOf()
     internal var clickListener: (Character, ImageView) -> Unit = { character, imageView ->}
@@ -31,7 +31,7 @@ class CharacterListAdapter @Inject constructor() :
     override fun onBindViewHolder(viewHolder: CharacterListViewHolder, position: Int) =
         viewHolder.bind(collection[position], clickListener)
 
-    class CharacterListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class CharacterListViewHolder(itemView: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(itemView) {
         fun bind(character: Character, clickListener: (Character, ImageView) -> Unit) {
             Glide.with(itemView)
                 .load(character.image)

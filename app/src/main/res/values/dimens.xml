@@ -6,7 +6,6 @@
     <dimen name="main_activity_progress_height">50dp</dimen>
 
     <!--CHARACTER ITEM-->
-    <dimen name="item_character_height">172dp</dimen>
     <dimen name="item_character_card_margin">3dp</dimen>
     <dimen name="item_character_card_height">3dp</dimen>
     <dimen name="item_character_card_corner_radius">2dp</dimen>

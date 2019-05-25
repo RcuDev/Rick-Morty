@@ -1,6 +1,6 @@
 package com.developer.rcu.rickandmorty.core.iterators
 
-import android.support.annotation.UiThread
+import androidx.annotation.UiThread
 import com.developer.rcu.rickandmorty.core.net.NetResult
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope

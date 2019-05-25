@@ -1,11 +1,10 @@
 package com.developer.rcu.rickandmorty.view
 
-import android.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.developer.rcu.rickandmorty.R
 import com.developer.rcu.rickandmorty.core.base.BaseFragment
@@ -22,7 +21,8 @@ class CharacterDetailFragment : BaseFragment() {
 
     override fun layoutId() = R.layout.fragment_character_detail
 
-    private var characterSelected: Character? = null
+    private lateinit var mBinding: FragmentCharacterDetailBinding
+    private lateinit var mCharacterSelected: Character
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,10 +31,10 @@ class CharacterDetailFragment : BaseFragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        val binding: FragmentCharacterDetailBinding = DataBindingUtil.inflate(inflater, layoutId(), container, false)
-        characterSelected = arguments?.getParcelable(Constants.BUNDLE_CHARACTER)
-        binding.setVariable(Constants.CHARACTER_BINDING_ID, characterSelected)
-        return binding.root
+        mCharacterSelected = arguments?.getParcelable(Constants.BUNDLE_CHARACTER)!!
+        mBinding = FragmentCharacterDetailBinding.inflate(inflater, container, false)
+        mBinding.character = mCharacterSelected
+        return mBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -47,8 +47,10 @@ class CharacterDetailFragment : BaseFragment() {
     }
 
     private fun initializeView() {
-        Glide.with(context)
-            .load(characterSelected?.image)
-            .into(characterImage)
+        context?.let {
+            Glide.with(it)
+                .load(mCharacterSelected.image)
+                .into(characterImage)
+        }
     }
 }
