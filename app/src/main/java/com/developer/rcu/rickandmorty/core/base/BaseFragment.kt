@@ -1,9 +1,9 @@
 package com.developer.rcu.rickandmorty.core.base
 
 import android.os.Bundle
-import android.support.annotation.StringRes
-import android.support.design.widget.Snackbar
-import android.support.v4.app.Fragment
+import androidx.annotation.StringRes
+import com.google.android.material.snackbar.Snackbar
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.toolbar.*
 /**
  * Created by Raul Corvo on 27/11/2018
  */
-abstract class BaseFragment : Fragment() {
+abstract class BaseFragment : androidx.fragment.app.Fragment() {
 
     abstract fun layoutId(): Int
 

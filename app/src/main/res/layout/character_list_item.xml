@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/movieCard"
     android:layout_width="match_parent"
@@ -20,7 +20,7 @@
             android:id="@+id/characterImage"
             android:layout_width="match_parent"
             android:layout_height="@dimen/item_character_card_image_height"
-            android:scaleType="center"
+            android:scaleType="centerCrop"
             android:transitionName="character_image"/>
 
         <TextView
@@ -35,4 +35,4 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-</android.support.v7.widget.CardView>
+</androidx.cardview.widget.CardView>

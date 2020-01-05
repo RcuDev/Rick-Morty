@@ -1,9 +1,8 @@
 package com.developer.rcu.rickandmorty.view
 
-import android.arch.lifecycle.Observer
 import android.os.Bundle
-import android.support.v7.widget.StaggeredGridLayoutManager
 import android.view.View
+import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import com.developer.rcu.rickandmorty.R
@@ -52,13 +51,18 @@ class CharacterListFragment : BaseFragment() {
     }
 
     private fun initializeViewModelObservers() {
-        characterListViewModel.loadCharacterList(pageToLoad).observe(this, Observer { pagedCharacter ->
-            pagedCharacter?.let {
-                renderCharacterList(pagedCharacter)
-            }
-        })
+        characterListViewModel.loadCharacterList(pageToLoad)
+            .observe(this, Observer { pagedCharacter ->
+                pagedCharacter?.let {
+                    renderCharacterList(pagedCharacter)
+                }
+            })
         characterListViewModel.onError().observe(this, Observer { errorMessage ->
-            notifyWithAction(errorMessage ?: R.string.error_unknown, R.string.action_refresh, ::retryLoadCharacterList)
+            notifyWithAction(
+                errorMessage ?: R.string.error_unknown,
+                R.string.action_refresh,
+                ::retryLoadCharacterList
+            )
         })
     }
 
@@ -67,7 +71,11 @@ class CharacterListFragment : BaseFragment() {
             showProgress(R.string.action_message_character_loading)
         }
 
-        characterListRV.layoutManager = StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
+        characterListRV.layoutManager =
+            androidx.recyclerview.widget.StaggeredGridLayoutManager(
+                3,
+                androidx.recyclerview.widget.StaggeredGridLayoutManager.VERTICAL
+            )
         characterListRV.adapter = characterListAdapter
         characterListAdapter.context = this.requireContext()
         characterListAdapter.clickListener = { character, imageView ->
@@ -78,7 +86,8 @@ class CharacterListFragment : BaseFragment() {
                 )
                 val bundle = Bundle()
                 bundle.putParcelable(Constants.BUNDLE_CHARACTER, character)
-                view.findNavController().navigate(R.id.action_characterList_to_characterDetail, bundle, null, extras)
+                view.findNavController()
+                    .navigate(R.id.action_characterList_to_characterDetail, bundle, null, extras)
             }
         }
 
